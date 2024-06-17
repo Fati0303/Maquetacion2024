@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fátima Castaños</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+
+</head>
+
+<body>
+    <header>
+        <div class="logo"><strong>Mi hoja de vida</strong></div>
+        <nav id="barra">
+            <hr>
+            <ul>
+                <li><a href="#">
+                        <div class="dropdown">
+                            portfolio
+                            <div class="dropdown-options">
+                                <a class="drop-item" href="#">estudios</a>
+                                <a class="drop-item" href="#">experiencia</a>
+                                <a class="drop-item" href="#">deporte</a>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li><a href="#">sobre mi</a></li>
+                <li><a href="#">contacto</a></li>
+                <li><a href="login.html">ingresar</a></li>
+            </ul>
+
+            <hr>
+        </nav>
+
+
+    </header>
+    <main>
+        <h1>¡Hola, soy Fátima Castaños!</h1>
+        <br>
+        <div class="fotoperfil">
+            <img src="fotoperfil.jpg" alt="Foto de perfil" height="200" width="180">
+        </div>
+        <h2>Técnica, deportista y futura desarrolladora full stack</h2>
+        <p>Lorem ipsum dolor sit amet consectetur <strong>adipisicing </strong>elit. Voluptate possimus iusto at. In
+            nostrum corrupti, corporis porro a consequatur modi ullam iusto totam dolor pariatur delectus nobis dolores,
+            amet aspernatur?</p>
+        <div>
+            <a id="instagram" href="https://instagram.com/faticastanos?igshid=MmJiY2l4NBkZg=="> <strong>¡Contactate
+                    conmigo!</strong></a>
+            <br>
+        </div>
+        <dialog id="dialog" class="dialog">
+            <div class="flex flex-row items-center justify-end 
+                        border-b-gray w-full p-1em">
+                <button id="closeBtn" class="button-close hover:bg-gray cursor-pointer">
+                    &times;
+                </button>
+            </div>
+            <div class="popup-content">
+                <h1><strong>¡Registrate ahora!</strong></h1>
+            </div>
+        </dialog>
+        <button id="openBtn" class="button-open">
+            ¿Aún no estas registrado?
+        </button>
+        <br>
+        <div id="alerta" class="alerta-open">
+            <button onclick="mostrarAlerta()">No presiones aquí</button>
+
+            <script>
+                function mostrarAlerta() {
+                    alert("ESTO ES UN ALERTA!");
+                }
+            </script>
+        </div>
+        <!-- -->
+        <script>
+            const dialog = document.getElementById('dialog');
+            const closeBtn = document.getElementById('closeBtn');
+            const modal = document.getElementById('openBtn');
+
+            modal.addEventListener('click', (event) => {
+                dialog.showModal();
+            });
+
+            closeBtn.addEventListener('click', (event) => {
+                dialog.close();
+            });
+        </script>
+        <br>
+        <video src="video.mp4" poster="foto.jpg" controls height="600px">
+            Tu navegador no admite el elemento <code>video</code>.
+        </video>
+        <br>
+        <audio src="audio.mp3" autoplay controls>
+            Tu navegador no admite el <code>audio</code> elemento.
+        </audio>
+        <br>
+        <div class="spline">
+        <script type="module" src="https://unpkg.com/@splinetool/viewer@1.6.8/build/spline-viewer.js"></script>
+        <spline-viewer url="https://prod.spline.design/xRmIQ5nOD9vx1JHu/scene.splinecode"></spline-viewer>
+        </div>
+    </main>
+
+    <footer>
+        <hr>
+        <p>&copy; 2023 Fátima Castaños. Todos los derechos reservados. </p>
+        <hr>
+    </footer>
+
+</body>
+
+</html>
